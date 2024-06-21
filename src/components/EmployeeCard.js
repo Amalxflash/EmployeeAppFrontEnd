@@ -1,9 +1,14 @@
 import React from 'react';
-import { Card, CardContent, Typography } from '@mui/material';
+import { Card, CardContent, Typography, withStyles } from '@mui/material';
 
-const EmployeeCard = ({ employee }) => {
+
+
+const EmployeeCard = ({ employee}) => {
   return (
-    <Card sx={{ minWidth: 275, minHeight: 150,  marginTop: 4, border: '1px solid #ccc' }}>
+    
+    <Card sx={{ minWidth: 275, minHeight: 150,  marginTop: 4, border: '1px solid blue', ':hover': {
+                backgroundColor: 'grey', // Hover color
+              } }} >
       <CardContent sx={{ textAlign: 'center' }}>
       <Typography color="text.secondary">
          Employee ID: {employee.id} 
